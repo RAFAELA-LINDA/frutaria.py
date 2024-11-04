@@ -1,3 +1,8 @@
+import os
+
+def LimpaTela():
+    os.system('cls' if os.name=='nt' else'clear')
+
 from cad_fruta import Fruta 
 frutinhas = Fruta()
 
@@ -14,12 +19,22 @@ else:
     print("Acesso negado")
 
 while acessopermitido:
-    print("menu \n")
-    print("1 - cadastro")
-    print("10 - sair")
-    menu = input("qual opção: ")
+    LimpaTela()
+    print("+----------------------+")
+    print("|      Menu            |")
+    print("|                      |")
+    print("|  1 - Cadastro        |")
+    print("|  2 - Mostrar estoque |")
+    print("| 10 - Sair            |")
+    print("|                      |")
+    print("+----------------------+")
+    menu = input(" qual opção: ")
     if menu == "1":
-        frutinhas.cadastro_fruta()
+        LimpaTela()
+        frutinhas.cadastrar_fruta()
+    elif menu == "2":
+        LimpaTela()
+        frutinhas.ver_estoque()    
     elif menu == "10":
         acessopermitido = False
     else:
