@@ -3,11 +3,15 @@ class Fruta:
         self.estoque = {}
 
     def cadastrar_fruta(self):
-        nome_da_fruta = input("Qual o nome da fruta: ")
-        qual_unidade_de_venda = input("Qual unidade de venda (kg, un): ")
-        quantidade_da_fruta = input("Qual a quantidade: ")
-        qual_o_preco = input("Qual o valor de venda: ")
-
+        print("+----")
+        print("| cadastro de fruta ")
+        print("|")
+        nome_da_fruta = input("|Qual o nome da fruta: ")
+        qual_unidade_de_venda = input("|Qual unidade de venda (kg, un): ")
+        quantidade_da_fruta = input("|Qual a quantidade: ")
+        qual_o_preco = input("|Qual o valor de venda: ")
+        self.adicionar_fruta(nome_da_fruta, qual_unidade_de_venda, quantidade_da_fruta, qual_o_preco)
+        
     def adicionar_fruta(self, nome, unidade, quantidade, preco):
         if nome in self.estoque:
             self.estoque[nome]['quantidade'] += quantidade
