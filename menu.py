@@ -1,3 +1,6 @@
+from cad_fruta import Fruta 
+frutinhas = Fruta()
+
 acessopemitido = False
 usuario = "adm"
 senha = "adm"
@@ -11,11 +14,13 @@ else:
     print("Acesso negado")
 
 while acessopermitido:
+    print("menu \n")
     print("1 - cadastro")
     print("10 - sair")
     menu = input("qual opção: ")
     if menu == "1":
-     if menu == "10":
+        frutinhas.cadastro_fruta()
+    elif menu == "10":
         acessopermitido = False
     else:
         print("opção invalida")
