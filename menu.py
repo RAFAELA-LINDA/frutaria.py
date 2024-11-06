@@ -1,4 +1,5 @@
 import os
+import json
 
 def LimpaTela():
     os.system('cls' if os.name=='nt' else'clear')
@@ -39,7 +40,6 @@ while acessopermitido:
         acessopermitido = False
     else:
         print("opção invalida")
-
 
 
 
